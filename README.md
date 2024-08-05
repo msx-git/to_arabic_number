@@ -1,39 +1,42 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# To Arabic Number
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A Dart package to convert numbers within a string to Arabic numerals.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Convert Latin digits (0-9) in any string to their Arabic numeral equivalents.
+- Easy-to-use API for integration into any Dart or Flutter project.
 
-## Getting started
+## Installation
+```
+dependencies:
+  to_arabic_number: 1.0.0
+```
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Then run ```flutter pub get``` to install the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Import the package and use the ```Arabic.number``` method to convert numbers within a string to Arabic numerals.
+```
+import 'package:to_arabic_number/to_arabic_number.dart';
 
-```dart
-const like = 'sample';
+void main() {
+  String text = "The year is 2024 and the time is 12:45 PM.";
+  String convertedText = Arabic.number(text);
+  print(convertedText); // Output: The year is ٢٠٢٤ and the time is ١٢:٤٥ PM.
+}
 ```
 
-## Additional information
+## Example
+Here's a simple example to get you started:
+```
+import 'package:to_arabic_number/to_arabic_number.dart';
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+void main() {
+  print(Arabic.number('0123456789')); // Output: ٠١٢٣٤٥٦٧٨٩
+  print(Arabic.number('The year is 2024 and the time is 12:45 PM.')); // Output: The year is ٢٠٢٤ and the time is ١٢:٤٥ PM.
+}
+```
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request.
