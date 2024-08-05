@@ -1,6 +1,6 @@
 name: to_arabic_number
 description: A Dart package to convert numbers within a string to Arabic numerals.
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/msx-git/to_arabic_number
 homepage: https://github.com/msx-git/to_arabic_number
 
